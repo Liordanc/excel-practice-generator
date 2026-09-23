@@ -1,45 +1,43 @@
 # Excel Practice Generator
 
-This repository contains a lightweight Python generator for creating Hebrew RTL Excel practice sheets with:
+מחולל קובצי תרגול Excel בעברית, מימין לשמאל.
 
-- merged title cell in `A1:C2`
-- instruction card
-- student question table
-- feedback section
-- error messages section
-- right-to-left layout for Hebrew
+## מה נוצר
 
-## Usage
+ההרצה יוצרת את `output/דוגמאות_תרגול.xlsx`, ובתוכו:
 
-1. Install dependencies:
+- **תרגול אחוזים** – שאלות עם אזור תשובות, כרטיס הוראות, משוב ושגיאות נפוצות.
+- **עיצוב מותנה** – נתוני ציונים עם כללים לדוגמה לצבעים אדום/ירוק וסרגל צבעים.
+- **מיון וסינון** – טבלת מכירות אמיתית עם נוסחאות, טבלת Excel ומסננים.
+- **יצירת גרף** – נתונים ותרשים עמודות לדוגמה.
+- **תשובות למורה** – תשובות והנחיות בדיקה לכל התבניות.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+בכל גיליון תרגול:
 
-2. Run the generator:
+- התאים `A1:C2` ממוזגים עבור נושא התרגיל.
+- כל התוכן בעברית ובכיוון מימין לשמאל.
+- יש כרטיס הוראות ברור.
+- יש אזור משוב והודעות שגיאה.
 
-   ```bash
-   python generate_practice_excel.py
-   ```
+## התקנה והרצה
 
-3. The output file will be created in the `output/` folder.
+```bash
+pip install -r requirements.txt
+python generate_practice_excel.py
+```
 
-## Example output
+לאחר ההרצה פתח את הקובץ:
 
-The generated workbook includes:
+```text
+output/דוגמאות_תרגול.xlsx
+```
 
-- a Hebrew title in the top merged cells
-- a card with exercise instructions
-- a table of questions and answer cells
-- teacher-facing feedback and error notes
+הקובץ נפתח ב־Excel, LibreOffice וגם ביישומים התומכים ב־XLSX.
 
-## Notes
+## הרחבה בהמשך
 
-This is a simple starter project intended to be extended with:
-
-- a UI wrapper
-- LLM-generated question content
-- multiple exercise templates
-- a teacher answer sheet
-- conditional formatting and richer workbook styling
+- ממשק Streamlit
+- יצירת תוכן ממודל שפה
+- תבניות נוספות לפי מקצוע
+- בדיקת תשובות אוטומטית
+- גיליונות תלמיד/מורה נפרדים
